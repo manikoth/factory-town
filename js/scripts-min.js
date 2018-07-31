@@ -1,0 +1,1 @@
+var mixer=mixitup("main",{selectors:{target:"figure"},animation:{duration:300}});$("video").mediaelementplayer({alwaysShowControls:!1,hideVideoControlsOnLoad:!0,features:["progress","volume","fullscreen"]}),$(document).ready(function(){$("#gallery-1,#gallery-2,#gallery-3,#gallery-4").Chocolat({loop:!0,imageSize:"cover",overlayOpacity:.9})});

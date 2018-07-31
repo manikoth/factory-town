@@ -1,0 +1,256 @@
+@import "variables";
+@import "chocolat";
+
+/************** 
+GLOBAL 
+***************/
+
+body {
+    background: $bodybg;
+    color: $secondaryColor;
+    font-family: $font1; 
+    
+    // Parent to `#logo` element for positioning
+    position: relative;
+}
+
+/*************** 
+NAVIGATION
+***************/
+
+// Primary Nav 
+// Portfolio Filters
+nav {
+    a:link,
+    a:visited, 
+    li {
+        color: $secondaryColor;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    a:after {
+        // forward slash link separator
+        content: " /";
+    }
+    a:focus {
+        background: $secondaryColor;
+        color: $primaryColor;
+    }
+    a:hover {
+        color: $primaryColor;
+        border-bottom: 2px solid $primaryColor;
+    }
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+    .active {
+        font-weight: bold;
+        border-bottom: 2px solid $primaryColor;
+    }
+}
+
+// Logo w/ "H5BP Image Replacement" Technique
+// REF: https://css-tricks.com/the-image-replacement-museum/
+#logo a {
+    // "H5BP Image Replacement" Technique
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background: url("../img/factory-town-logo.png");
+    width: 42px;
+    height: 42px; 
+    
+    // Position to <aside> container
+    position: absolute;
+    top: 0%;
+    right: 5%;
+}
+
+/*************** 
+LAYOUT 
+***************/
+
+main {
+    // horizontal-center align
+    margin: 0 auto;
+    width: 90%; // CSS Grid
+    display: grid; // Left Column & Right Column respectively
+    grid-template-columns: 25% 901px; // Full Height
+    grid-template-rows: 1fr;
+}
+
+aside {
+    // width defined in <main> w/ CSS grid
+}
+
+// Center align <article> content
+.video article, 
+.photo article {
+    justify-content: center;
+    background: black;
+}
+
+/*************** 
+PORTFOLIO (work)
+***************/
+
+article {
+    background: $primaryColor; // Flexbox for Portfolio Items
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+figure {
+    background: #000;
+    // outline: 1px solid whitesmoke;
+    color: whitesmoke;
+    margin: 0;
+    height: 225px;
+    // width: 225px;
+
+    position: relative;
+}
+
+figure img {
+    transition: opacity .33s ease-in-out;
+}
+
+figure:hover img {    
+    opacity: 0;
+}
+
+figure figcaption {
+    opacity: 0;
+
+    position: absolute;
+    left: 25%;
+    top: 50%;
+
+    color:#fff;
+    text-align: center;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+.empty-square {
+    background:black;
+    height: 225px;
+    width: 225px;
+}
+
+.empty-rect {
+    background:black;
+    height: 225px;
+    width: 450px;
+}
+
+/*************** 
+VIDEO LISTING
+***************/
+.mejs__container {
+    margin: 5em 0;
+}
+
+.video main {
+    grid-template-columns: 25% 1024px;
+}
+
+// Video Details
+
+aside {
+
+    li {
+        list-style: none;
+    }
+    section {
+        height: 360px;
+        position: relative;
+    }
+    // Temporary Alignment
+    .project-info {
+        position: absolute;
+    }
+    .project-info:nth-child(1) {
+        bottom: 0;
+    }
+    .project-info:nth-child(2) {
+        bottom: -520px;
+    }
+    .project-info:nth-child(3) {
+        bottom: -1040px;
+    }
+    .project-info:nth-child(4) {
+        bottom: -1560px;
+    }
+
+}
+
+/*************** 
+PHOTO LISTING
+***************/
+.photo article img {
+    margin: 5em 0;
+    width: 480px;
+}
+
+/*************** 
+CONTACT
+***************/
+html,
+body {
+    height: 100vh;
+}
+
+.contact {
+    background: $bodybg url("../img/bg-triangle.png") no-repeat bottom right;
+}
+
+.contact article {
+    background: none;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+}
+
+.contact article a:link,
+.contact article a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 4em;
+}
+
+.contact article a:hover {
+    color: black;
+}
+
+/*************** 
+HOMEPAGE
+***************/
+.home {
+    background: $bodybg url("../img/bg-homepage.png") bottom no-repeat;
+}
+
+.home article {
+    background: none;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+}
+
+.home article a:link,
+.home article a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 4em;
+}
