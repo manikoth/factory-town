@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Factory Town : (Mobile) Photo </title>
+
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/mediaelementplayer.min.css">    
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="mobile-video">
+    
+<!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <!-- Navbar Left -->
+        <div class="navbar-brand">
+                <img src="img/factory-town-logo.png" alt="Factory Town" />
+        
+                <!-- Hamburger -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                </a>
+        </div>
+
+        <!-- Navbar Right -->
+        <div class="navbar-menu">
+            
+                <div class="navbar-start">
+                        <a class="navbar-item" href="index-mobile.html">
+                                Home
+                            </a>
+                            <a class="navbar-item" href="work-mobile.html">
+                                Work
+                            </a>
+                            <a class="navbar-item" href="contact-mobile.html">
+                                Contact
+                            </a>
+                </div>
+        
+        </div>
+
+    </nav>
+
+<!-- Row A -->
+<div class="columns">
+    <div class="column">
+        <ul class="project-info">
+            <li>Project : <span>The Story Unfolds</span></li>
+            <li>Client : <span>Gonzaga</span></li>
+            <li>Credits : <span>Firstname Lastname</span></li>  
+        </ul>
+    </div>
+    <div class="column">
+        <video     
+            src="content/gonzaga.mp4"
+            type="video/mp4"
+            width="640" 
+            height="360"
+            poster="content/poster-gonzaga.png"
+            playsinline webkit-playsinline>
+        </video>
+    </div>
+
+</div> 
+
+<!-- Row B -->
+<div class="columns">
+        <div class="column">
+            <ul class="project-info">
+                    <li>Project : <span>The Pitch</span></li>
+                    <li>Client : <span>Downtown Spokane Partnership</span></li>
+                    <li>Credits : <span>Firstname Lastname</span></li>   
+            </ul>
+        </div>
+        <div class="column">
+                <video     
+                src="content/pitch.mp4"
+                type="video/mp4"
+                width="640" 
+                height="360"
+                poster="content/poster-pitch.png"
+                playsinline webkit-playsinline>
+            </video>
+        </div>
+    
+    </div> 
+
+<!-- Row C -->
+<div class="columns">
+        <div class="column">
+            <ul class="project-info">
+                    <li>Project : <span>Into The Heart of Rwanda</span></li>
+                    <li>Client : <span>Healing Hearts Northwest</span></li>
+                    <li>Credits : <span>Firstname Lastname</span></li>
+            </ul>
+        </div>
+        <div class="column">
+                <video     
+                src="content/heart.mp4"
+                type="video/mp4"
+                width="640" 
+                height="360"
+                poster="content/poster-heart.png"
+                playsinline webkit-playsinline>
+            </video>
+        </div>
+    
+    </div>     
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/mediaelement-and-player.min.js"></script>
+
+<script>
+    // Media Element Player
+$('video').mediaelementplayer({
+alwaysShowControls: false,
+hideVideoControlsOnLoad: true,
+features: ['progress', 'volume', 'fullscreen']
+});
+</script>
+
+</body>
+</html>    

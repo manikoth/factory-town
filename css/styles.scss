@@ -254,3 +254,59 @@ HOMEPAGE
     text-decoration: none;
     font-size: 4em;
 }
+
+/************** 
+MOBILE 
+***************/
+
+// Override
+.mobile nav a::after,
+.mobile-contact .navbar a::after,
+.mobile-work .navbar a::after,
+.mobile-photo .navbar a::after,
+.mobile-video .navbar a::after {
+    content: none;
+}
+
+#banner {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+section a:link, 
+section a:visited,
+.mobile-contact a:link, 
+.mobile-contact a:visited {
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.mobile-contact p {
+    margin: 1em;
+}
+
+.mobile-work .filters {
+    margin: 1em;
+}
+
+.mobile-work main {
+    display: block;
+}
+
+.mobile-photo .project-info {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.mobile-photo .project-info span {
+    font-weight: normal;
+    display: block;
+}
+
+.mobile-video .mejs__container {
+    margin: 0 !important;
+}

@@ -1,28 +1,23 @@
-// Mix-It-Up Filters
-var mixer = mixitup('main', {
-    selectors: {
-        target: 'figure'
-    },
-    animation: {
-        duration: 300
-    }
-});
-
-// Media Element Player
-$('video').mediaelementplayer({
-    alwaysShowControls: false,
-    hideVideoControlsOnLoad: true,
-    features: ['progress', 'volume', 'fullscreen']
-});
-
-// Chocolat
-$(document).ready(function(){
     
+    
+    // Bulma
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+  
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        //$(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+  
+    });
+
     $('#gallery-1,#gallery-2,#gallery-3,#gallery-4').Chocolat({
         loop           : true,
         imageSize     : 'cover',
         overlayOpacity : 0.9
     });
 
-});
+
+
+
+
 
